@@ -1,0 +1,12 @@
+digraph ast {
+START [label="START - ForTest",width=0,height=0];
+L120 [label="L#120 int x = 3;",width=0,height=0];
+L122 [label="L#122 for(int i = 0; i < x; i++){",width=0,height=0];
+L123 [label="L#123 System.out.println(\"i\");",width=0,height=0];
+L130 [label="L#130 }",width=0,height=0];
+START -> L120
+L120 -> L122
+L123 -> L122
+L122 -> L130
+L122 -> L123
+}

@@ -1,0 +1,25 @@
+digraph ast {
+START [label="START - test2",width=0,height=0];
+L29 [label="L#29 int x = 4;",width=0,height=0];
+L30 [label="L#30 int y = 4;",width=0,height=0];
+L32 [label="L#32 if(x < y){",width=0,height=0];
+L33 [label="L#33 System.out.println(\"x < y\");",width=0,height=0];
+L34 [label="L#34 }else",width=0,height=0];
+L35 [label="L#35 if(y < x){",width=0,height=0];
+L36 [label="L#36 System.out.println(\"y < x\");",width=0,height=0];
+L37 [label="L#37 }else{",width=0,height=0];
+L38 [label="L#38 System.out.println(\"x = y\");",width=0,height=0];
+L40 [label="L#40 }",width=0,height=0];
+START -> L29
+L29 -> L30
+L30 -> L32
+L32 -> L33
+L33 -> L34
+L35 -> L36
+L36 -> L37
+L38 -> L40
+L32 -> L35
+L34 -> L40
+L35 -> L38
+L37 -> L40
+}

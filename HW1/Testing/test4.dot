@@ -1,0 +1,16 @@
+digraph ast {
+START [label="START - test4",width=0,height=0];
+L54 [label="L#54 int x = 4;",width=0,height=0];
+L55 [label="L#55 int y = 5;",width=0,height=0];
+L57 [label="L#57 while(x < y){",width=0,height=0];
+L58 [label="L#58 System.out.println(\"x < y\");",width=0,height=0];
+L59 [label="L#59 ++x;",width=0,height=0];
+L61 [label="L#61 }",width=0,height=0];
+START -> L54
+L54 -> L55
+L55 -> L57
+L58 -> L59
+L59 -> L57
+L57 -> L61
+L57 -> L58
+}

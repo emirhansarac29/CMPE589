@@ -1,0 +1,32 @@
+digraph ast {
+START [label="START - test1",width=0,height=0];
+L8 [label="L#8 int x = 3;",width=0,height=0];
+L9 [label="L#9 int y = 5;",width=0,height=0];
+L11 [label="L#11 if(x <= 2){",width=0,height=0];
+L12 [label="L#12 if(y >= 4){",width=0,height=0];
+L13 [label="L#13 System.out.println(\"x <=2 and y >= 4\");",width=0,height=0];
+L14 [label="L#14 }else{",width=0,height=0];
+L15 [label="L#15 System.out.println(\"x <= 2 and y < 4\");",width=0,height=0];
+L17 [label="L#17 }else{",width=0,height=0];
+L18 [label="L#18 if(y >= 4){",width=0,height=0];
+L19 [label="L#19 System.out.println(\"x > 2 and y >= 4\");",width=0,height=0];
+L20 [label="L#20 }else{",width=0,height=0];
+L21 [label="L#21 System.out.println(\"x < 2 and y < 4\");",width=0,height=0];
+L24 [label="L#24 }",width=0,height=0];
+START -> L8
+L8 -> L9
+L9 -> L11
+L11 -> L12
+L12 -> L13
+L13 -> L14
+L15 -> L17
+L18 -> L19
+L19 -> L20
+L21 -> L24
+L11 -> L18
+L12 -> L15
+L14 -> L24
+L17 -> L24
+L18 -> L21
+L20 -> L24
+}
